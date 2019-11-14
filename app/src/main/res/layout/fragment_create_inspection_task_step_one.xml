@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        app:rv_backgroundColor="@color/white"
+        app:rv_cornerRadius="5dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_search_blue"
+            />
+
+        <EditText
+            android:textCursorDrawable="@null"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:id="@+id/search"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:hint="搜索项目编号/项目名称"
+            android:textColor="@color/gray_999999"
+            android:textSize="13dp" />
+    </com.flyco.roundview.RoundLinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_create_inspection_task_rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/fragment_create_inspection_task_step_one_rtv_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:rv_backgroundColor="@color/blue_349fff"
+        app:rv_cornerRadius="5dp"
+        />
+</LinearLayout>

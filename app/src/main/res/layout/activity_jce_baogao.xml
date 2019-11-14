@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".activity.JceBaogaoActivity">
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="基本信息"
+                    android:textColor="@color/blue_0079e4"
+                    android:textSize="18dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@color/gray_d7d7d7" />
+
+                <LinearLayout style="@style/inspection_item">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="检测项目" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text="龙湖天街翻新"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/inspection_item">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="报告编号" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text="P2019030111XC022" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/inspection_item">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="报告得分" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text="98.98分" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/inspection_item">
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="检测时间" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text="2019/3/5  09:35:10"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/inspection_item"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="检测楼栋" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text="#9  #10"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/inspection_item"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="施工班组" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text="#9腻子层施工"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/inspection_item"
+                    android:layout_marginTop="18dp">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="检测评价" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text="5号楼腻子一遍施工5号楼腻子一遍施工5号楼腻子一遍施工"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/gray_eeeeee" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="待整改项目"
+                    android:textColor="@color/blue_0079e4"
+                    android:textSize="18dp"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@color/gray_d7d7d7"
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/jcbg_content_rvlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_white" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="14dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:id="@+id/isshow"
+                android:paddingRight="14dp"
+                >
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="检测要求"
+
+                    android:textColor="@color/blue_0079e4"
+                    android:textSize="18dp" />
+
+
+                <ImageView
+                    android:id="@+id/tupian"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:clickable="false"
+                    android:src="@mipmap/shangla" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/gray_d7d7d7" />
+            <!-- 检测要求 开始 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:id="@+id/isshowly"
+                android:paddingRight="14dp">
+
+                <LinearLayout style="@style/inspection_item">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="检测项目" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:id="@+id/name"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/inspection_item">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="报告要求" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:id="@+id/need"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/inspection_item">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="点位数量" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text=""
+                        android:id="@+id/pointnum"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/inspection_item">
+
+                    <TextView
+                        style="@style/inspection_item_black"
+                        android:text="说明备注" />
+
+                    <TextView
+                        style="@style/inspection_item_gray"
+                        android:text=""
+                        android:id="@+id/remark"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 检测要求 结束 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/gray_eeeeee" />
+            <!-- 检测数据 开始 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="检测数据"
+                        android:textColor="@color/blue_0079e4"
+                        android:textSize="18dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="17dp"
+                        android:background="@color/gray_d7d7d7" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_inspection_item_rv_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp" />
+            </LinearLayout>
+            <include layout="@layout/shuiyin" />
+            <!-- 检测数据 结束-->
+        </LinearLayout>
+        <!-- 形式2 结束 -->
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

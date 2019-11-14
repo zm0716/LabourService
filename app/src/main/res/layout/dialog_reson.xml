@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        app:rv_backgroundColor="@color/white"
+        app:rv_cornerRadius_TL="10dp"
+        app:rv_cornerRadius_TR="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#f00"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="未采集数据原因"
+                android:textColor="@color/black_333333"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_d2d2d2" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:paddingTop="8dp"
+            android:id="@+id/dialog_stop_inspection_et_extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入未采集数据原因"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:maxLength="200"
+
+            android:minHeight="180dp"
+            android:textColorHint="@color/gray_999999"
+            android:textSize="17dp" />
+
+
+
+    </com.flyco.roundview.RoundLinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_d2d2d2" />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/dialog_stop_inspection_rtv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black_333333"
+            android:textSize="17dp"
+            app:rv_backgroundColor="@color/gray_eeeeee"
+         />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/dialog_stop_inspection_rtv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:rv_backgroundColor="@color/blue_349fff"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>

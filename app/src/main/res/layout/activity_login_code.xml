@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_2093ff">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="37.5dp"
+        android:layout_marginRight="37.5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/logo" />
+
+        <ImageView
+            android:layout_width="93dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/logo_text" />
+
+        <com.flyco.roundview.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:gravity="center"
+
+            android:paddingRight="14dp"
+            app:rv_backgroundColor="@android:color/white"
+            app:rv_cornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="47dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/phone" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="21dp"
+                android:background="@color/gray_cccccc"
+                />
+
+            <EditText
+                android:id="@+id/activity_login_code_et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:hint="手机号码"
+                android:inputType="phone"
+                android:paddingLeft="14dp"
+                android:textColorHint="@color/gray_cccccc"
+                android:textSize="13dp"
+                android:text=""
+                />
+
+
+        </com.flyco.roundview.RoundLinearLayout>
+
+        <com.flyco.roundview.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingRight="14dp"
+            app:rv_backgroundColor="@android:color/white"
+            app:rv_cornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="47dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/verify" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="21dp"
+                android:background="@color/gray_cccccc" />
+
+            <EditText
+                android:id="@+id/activity_login_code_et_code"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="短信验证码"
+                android:inputType="number"
+                android:paddingLeft="14dp"
+                android:textColorHint="@color/gray_cccccc"
+                android:textSize="13dp"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/activity_login_code_tv_send_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="发送验证码"
+                android:textColor="@color/black_333333"
+                android:textSize="13dp" />
+        </com.flyco.roundview.RoundLinearLayout>
+
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_login_code_rtv_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/yellow_fecb1b"
+            app:rv_cornerRadius="5dp" />
+
+        <TextView
+            android:id="@+id/activity_login_code_tv_login_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="账户密码登录"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
+

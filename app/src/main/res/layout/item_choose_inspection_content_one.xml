@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp">
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@mipmap/ic_unchecked" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="安全评价"
+        android:textColor="@color/black_333333"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(1/57)"
+        android:textColor="@color/gray_999999"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:layout_width="6dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_arrow_right" />
+</LinearLayout>

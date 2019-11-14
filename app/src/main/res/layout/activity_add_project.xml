@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddProjectActivity">
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/relayout_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_lou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginRight="14dp"
+                        android:text="楼栋信息"
+                        android:textColor="@color/blue_0079e4"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/text_lou"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@color/gray_d7d7d7" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/m_project_recy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/relayout_one"
+                    android:layout_marginBottom="90dp" />
+
+                <RelativeLayout
+                    android:id="@+id/m_null_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/relayout_one"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="142dp"
+                        android:layout_height="110dp"
+                      android:layout_centerInParent="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/empty_inspection_position" />
+
+                    <LinearLayout
+                        android:id="@+id/m_add_buildings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp"
+                        android:visibility="gone">
+
+                        <com.flyco.roundview.RoundTextView
+                            android:id="@+id/activity_qd_detail_rtv_upload"
+                            android:layout_width="184dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+新增楼栋"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:rv_backgroundColor="@color/blue_349fff"
+                            app:rv_cornerRadius="5dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/m_add_buildings_pl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="25dp"
+                        android:text="+批量新增楼栋"
+                        android:textColor="@color/blue_2093ff"
+                        android:textSize="17sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/m_add_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/m_add_buildings_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="+新增楼栋"
+                android:textColor="#ff349fff"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:background="#BBBEC7" />
+
+            <TextView
+                android:id="@+id/m_batches_add_buildings_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="+批量新增楼栋"
+                android:textColor="#ff349fff"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_next_xinxi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="下一步"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

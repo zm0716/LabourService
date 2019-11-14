@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@android:color/white"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp">
+
+    <RelativeLayout
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/ic_message_blue" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/item_message_rtv_unread"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="14"
+            android:textColor="@android:color/white"
+            android:textSize="9dp"
+            app:rv_backgroundColor="@color/red_fb5215"
+            app:rv_isRadiusHalfHeight="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/item_message_rtv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="工作通知:三原色节能建筑工程有限公司"
+                android:textColor="@color/black_333333"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/item_message_rtv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:20"
+                android:textColor="@color/gray_999999"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_message_rtv_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="【检测】收到一项检测任务"
+            android:textColor="@color/gray_999999"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingRight="14dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/phone" />
+
+        <EditText
+            android:id="@+id/activity_forget_pwd_et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="输入手机号码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="14dp"
+            android:textColorHint="@color/gray_cccccc"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingRight="14dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/verify" />
+
+        <EditText
+            android:id="@+id/activity_forget_pwd_et_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="短信验证码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="14dp"
+            android:textColorHint="@color/gray_cccccc"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/activity_forget_pwd_tv_send_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="发送验证码"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingRight="14dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/lock" />
+
+        <EditText
+            android:id="@+id/activity_forget_pwd_et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="输入新密码，字母+数字 ，6位以上"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingLeft="14dp"
+            android:textColorHint="@color/gray_cccccc"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingRight="14dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/lock" />
+
+        <EditText
+            android:id="@+id/activity_forget_pwd_et_pwd_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="确认密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingLeft="14dp"
+            android:textColorHint="@color/gray_cccccc"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/activity_forget_pwd_rtv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="13dp"
+        app:rv_backgroundColor="@color/blue_2093ff"
+        app:rv_cornerRadius="5dp" />
+</LinearLayout>

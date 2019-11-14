@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.AddBuildingActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:id="@+id/m_project_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="楼栋名称"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/m_project_name_editext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/m_project_name"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入楼栋名称"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text_lou"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="19dp"
+                android:background="@color/gray_d2d2d2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:id="@+id/m_down_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="地下楼层数"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/m_down_number_editext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/m_down_number"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入地下楼层数"
+                    android:inputType="number"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text_lou"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="19dp"
+                android:background="@color/gray_d2d2d2" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:id="@+id/m_up_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="地上楼层数"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/m_up_number_editext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/m_up_number"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入地上楼层数"
+                    android:inputType="number"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text_lou"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="19dp"
+                android:background="@color/gray_d2d2d2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="施工部位"
+                android:textColor="#ff333333"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="23dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/m_dong"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/blue_check"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="东"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/m_nan"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/blue_check"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="南"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/m_dongbei"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/blue_check"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="东北"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/m_xibei"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/blue_check"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="西北"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/m_sg_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/activity_next_creat_project"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:rv_backgroundColor="@color/blue_349fff"
+                app:rv_cornerRadius="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

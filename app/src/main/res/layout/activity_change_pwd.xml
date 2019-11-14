@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:paddingRight="9dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入旧密码"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/activity_change_pwd_et_old"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center"
+            android:hint="请输入"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingLeft="14dp"
+            android:textColorHint="@color/gray_cccccc"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/activity_change_pwd_iv_eye_old"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/eye_close" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:paddingRight="9dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入新密码"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/activity_change_pwd_et_new"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center"
+            android:hint="请输入"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingLeft="14dp"
+            android:textColorHint="@color/gray_cccccc"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/activity_change_pwd_iv_eye_new"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/eye_close" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="20dp"
+        android:text="密码必须至少6个字符，包含字母或字母"
+        android:textColor="@color/gray_999999"
+        android:textSize="12dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/activity_change_pwd_rtv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="13dp"
+        app:rv_backgroundColor="@color/blue_2093ff"
+        app:rv_cornerRadius="5dp" />
+</LinearLayout>

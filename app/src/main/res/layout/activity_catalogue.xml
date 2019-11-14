@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+   <!-- <include layout="@layout/layout_toolbar_white" />-->
+    <!--<include layout="@layout/layout_toolbar" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@mipmap/toolbar_bg">
+        <RelativeLayout
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/layout_toolbar_iv_back"
+                android:layout_width="37dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:src="@mipmap/ic_back_white" />
+
+            <TextView
+                android:id="@+id/layout_toolbar_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="新建检测任务"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首级"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#fff"
+                android:padding="5dp"
+                android:id="@+id/firsttv"
+                android:layout_marginRight="44dp"
+                />
+
+            <ImageView
+                android:id="@+id/layout_toolbar_iv_operate"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@mipmap/more"
+              />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/gray_eeeeee"
+        android:gravity="center_vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <TextView
+            android:id="@+id/activity_catalogue_tv_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="首级/安全评价"
+            android:textColor="@color/gray_999999"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_catalogue_rv_list"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/activity_data_collection_rtv_end2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="结束任务"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:rv_backgroundColor="@color/blue_349fff"
+        app:rv_cornerRadius="5dp" />
+</LinearLayout>

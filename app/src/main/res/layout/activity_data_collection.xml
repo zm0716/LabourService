@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:id="@+id/activity_data_collection_ll_without_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="181.5dp"
+                    android:layout_height="117dp"
+                    android:src="@mipmap/empty_data_collection" />
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/activity_data_collection_rtv_upload"
+                    android:layout_width="184dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="上传图片"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    app:rv_backgroundColor="@color/blue_349fff"
+                    app:rv_cornerRadius="5dp" />
+
+            </LinearLayout>
+            <!-- 有图片的情况 开始 -->
+            <LinearLayout
+                android:id="@+id/activity_data_collection_ll_with_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/activity_data_collection_ll_without_picture"
+                android:visibility="gone"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/activity_data_collection_tv_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="影像留存"
+                        android:textColor="@color/black_333333"
+                        android:textSize="17dp" />
+
+                    <android.support.v7.widget.RecyclerView
+
+                        android:id="@+id/activity_data_collection_rv_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:background="@color/gray_d2d2d2" />
+
+                <RelativeLayout
+
+                    android:id="@+id/activity_data_collection_ll_measure_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="测量位置"
+                        android:textColor="@color/black_333333"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="*"
+                        android:textColor="@color/red_cc0000"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/activity_add_rectification_tv_measure_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:text="请选择"
+                        android:textColor="@color/black_333333"
+                        android:textSize="17dp" />
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:background="@color/gray_d2d2d2" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="位置描述"
+                        android:textColor="@color/black_333333"
+                        android:textSize="17dp" />
+
+
+                    <EditText
+                        android:id="@+id/desc_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入位置描述"
+                        android:maxLength="100"
+                        android:minHeight="50dp"
+
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/black_333333"
+                        android:textColorHint="@color/gray_999999"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 有图片的情况 结束 -->
+            <!-- 搜索框 开始 -->
+            <LinearLayout
+
+                android:id="@+id/m_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_data_collection_ll_with_picture"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="14dp"
+                android:paddingTop="10dp"
+                android:paddingRight="14dp"
+                android:paddingBottom="10dp">
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:id="@+id/search2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    app:rv_backgroundColor="@color/gray_eeeeee"
+                    app:rv_cornerRadius="5dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/ic_search" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="输入检测项名称"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="14dp" />
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+                <com.flyco.roundview.RoundTextView
+
+                    android:id="@+id/activity_data_collection_rtv_multi"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="批量"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:rv_backgroundColor="@color/blue_349fff"
+                    app:rv_cornerRadius="5dp" />
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    app:rv_backgroundColor="@color/gray_eeeeee"
+                    app:rv_cornerRadius="5dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/ic_search" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="输入检测项名称"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="14dp" />
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+                <ImageView
+                    android:id="@+id/activity_data_collection_iv_toggle"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_catalogue"
+                    android:visibility="gone" />
+
+                <com.flyco.roundview.RoundTextView
+
+                    android:id="@+id/activity_data_collection_type"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="目录"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:rv_backgroundColor="@color/blue_349fff"
+                    app:rv_cornerRadius="5dp" />
+            </LinearLayout>
+            <!-- 搜索框 结束 -->
+            <LinearLayout
+                android:id="@+id/m_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/m_table"
+                android:background="@color/white"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray_d2d2d2" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_data_collection_rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/m_line"
+                android:visibility="gone" />
+
+            <!-- 形式2 开始 -->
+            <LinearLayout
+                android:id="@+id/activity_data_collection_ll_kind_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_data_collection_rv_list"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+
+                    android:id="@+id/activity_data_collection_rv_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray_d2d2d2" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_data_collection_rv_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_data_collection_rv_kind_2_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+            <!-- 形式2 结束 -->
+            <include layout="@layout/shuiyin" />
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/activity_data_collection_rtv_end"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="结束任务"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:rv_backgroundColor="@color/blue_349fff"
+        app:rv_cornerRadius="5dp" />
+</LinearLayout>

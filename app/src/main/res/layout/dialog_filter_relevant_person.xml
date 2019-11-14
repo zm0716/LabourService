@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_filter_relevant_person_ll_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_filter_relevant_person_tv_all"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="38dp"
+        android:text="全部"
+        android:textColor="@color/black_333333"
+        android:textSize="12dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_eeeeee" />
+
+    <TextView
+        android:id="@+id/dialog_filter_relevant_person_tv_receive"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="38dp"
+        android:text="我负责的"
+        android:textColor="@color/black_333333"
+        android:textSize="12dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_eeeeee" />
+
+    <TextView
+        android:id="@+id/dialog_filter_relevant_person_tv_dispatch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="38dp"
+        android:text="我分派的"
+        android:textColor="@color/black_333333"
+        android:textSize="12dp" />
+</LinearLayout>

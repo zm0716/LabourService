@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical"
+    tools:context=".activity.ImageAddressActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_staff_selection_rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/activity_staff_selection_rtv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="确定（0）"
+        android:textColor="@android:color/white"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:rv_backgroundColor="@color/blue_349fff"
+        app:rv_cornerRadius="5dp" />
+</LinearLayout>

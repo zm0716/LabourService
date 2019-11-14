@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="14dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <com.agilefinger.labourservice.widget.DashView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                app:dashOrientation="1"
+                app:dashWidth="2dp"
+                app:lineColor="@color/blue_349fff"
+                app:lineHeight="2dp"
+                app:lineWidth="2dp" />
+
+
+            <com.gcssloop.widget.RCImageView
+                android:id="@+id/item_rectification_detail_iv_head"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/portrait"
+                app:round_corner="5dp"
+                app:stroke_color="@color/blue_349fff"
+                app:stroke_width="1dp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/item_rectification_detail_tv_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="孙德明"
+                    android:textColor="@color/black_333333"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_rectification_detail_tv_operate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="驳回整改"
+                    android:textColor="@color/black_333333"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/item_rectification_detail_tv_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="孙德明"
+                    android:textColor="@color/black_333333"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_rectification_detail_tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="05/22 19:50"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_rectification_detail_tv_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="风格风歪曲，格缝漆剥离风格风歪曲，格缝漆剥离风格风歪曲，格缝漆剥离风格风歪曲。"
+                android:textColor="@color/gray_999999"
+                android:textSize="12dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/item_rectification_detail_rv_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/item_rectification_detail_rv_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/item_rectification_detail_iv_look"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="查阅状态"
+                android:textColor="@color/blue_66a7e1"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="23dp"
+        android:background="@color/gray_eeeeee" />
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:gravity="center">
+
+        <ImageView
+
+            android:layout_marginLeft="8dp"
+            android:id="@+id/item_data_collection_multi_iv_check"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/ic_unchecked"
+
+            />
+        <TextView
+            android:id="@+id/item_data_collection_multi_tv_jcx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="加强钢丝绳有四个卡"
+            android:textColor="@color/black_333333"
+            android:textSize="17dp"
+            />
+        <TextView
+            android:id="@+id/item_search_inspection_item_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:visibility="gone"
+            android:textColor="@color/black_333333"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_width="6dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:id="@+id/zhanshi"
+            android:src="@mipmap/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <TextView
+        android:clickable="false"
+        android:id="@+id/item_data_collection_multi_tv_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        android:lineSpacingExtra="4dp"
+        android:text="安全评价"
+        android:textColor="@color/black_333333"
+        android:textSize="15dp"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/gray_d2d2d2" />
+</LinearLayout>

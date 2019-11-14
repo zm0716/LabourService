@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_direction_tv_title"
+    android:layout_width="50dp"
+    android:layout_height="40dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginRight="8dp"
+    android:gravity="center"
+    android:text="东立面"
+    android:textColor="@color/black_333333"
+    android:textSize="13dp"
+    app:rv_backgroundColor="@android:color/white"
+    app:rv_strokeColor="@color/gray_eeeeee"
+    app:rv_strokeWidth="1dp" />

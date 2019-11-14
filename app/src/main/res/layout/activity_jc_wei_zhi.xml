@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.JcWeiZhiActivity">
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+    <RelativeLayout
+        android:id="@+id/relayout_one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/text_lou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:text="楼栋信息"
+            android:textColor="@color/blue_0079e4"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+添加检测位置"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:textColor="@color/blue_0079e4"
+            android:textSize="17sp"
+            />
+        <View
+            android:layout_below="@+id/text_lou"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_d7d7d7"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            />
+
+
+    </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/buildrv"
+
+            ></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:visibility="visible"
+        >
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_next_xinxi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp"
+            />
+    </LinearLayout>
+</LinearLayout>

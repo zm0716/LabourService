@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:rv_backgroundColor="@android:color/white"
+    app:rv_cornerRadius="5dp"
+    app:rv_strokeColor="@color/blue_349fff"
+    app:rv_strokeWidth="1dp">
+
+    <TextView
+        android:id="@+id/dialog_alert_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingBottom="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp"
+        android:text="确定提交？"
+        android:textColor="@color/black_333333"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_eeeeee" />
+
+    <TextView
+        android:id="@+id/dialog_alert_tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="15dp"
+        android:text="我知道了"
+        android:textColor="@color/blue_349fff"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+</com.flyco.roundview.RoundLinearLayout>

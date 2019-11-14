@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/m_group_img"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:src="@mipmap/delete_limian" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/m_group_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/m_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="孙鹏鹏"
+                android:textColor="#ff333333"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/m_group_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019--1-1 加入"
+                android:textColor="#ff999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/m_shanchu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/shanchu" />
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.5dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="#D2D2D2" />-->
+    </RelativeLayout>
+
+</RelativeLayout>

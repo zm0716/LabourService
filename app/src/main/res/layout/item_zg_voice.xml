@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_zg_voice_ll_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/item_zg_voice_rl_wrapper"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="7dp">
+
+        <com.flyco.roundview.RoundLinearLayout
+            android:id="@+id/item_zg_voice_rll_voice"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:minWidth="100dp"
+            android:paddingLeft="10dp"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/item_zg_voice_iv_play"
+                android:layout_width="13dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_voice" />
+
+            <TextView
+                android:id="@+id/item_zg_voice_tv_len"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="12''"
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+        </com.flyco.roundview.RoundLinearLayout>
+
+        <ImageView
+            android:id="@+id/item_zg_voice_iv_del"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_delete" />
+    </RelativeLayout>
+
+
+</LinearLayout>

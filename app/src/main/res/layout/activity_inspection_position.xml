@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+    <include layout="@layout/layout_toolbar_white" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/activity_inspection_position_ll_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_inspection_position_rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/activity_inspection_position_rtv_add_inspection_building"
+                android:layout_width="185dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="添加检测楼栋"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                app:rv_backgroundColor="@color/blue_349fff"
+                app:rv_cornerRadius="5dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/gray_eeeeee"
+        android:padding="5dp">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_inspection_position_rtv_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

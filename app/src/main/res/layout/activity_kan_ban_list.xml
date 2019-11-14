@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.KanBanListActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <com.agilefinger.labourservice.widget.DropDownMenu
+        android:id="@+id/activity_kanban_list_ll_ddm_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:dddividerColor="@color/gray_eeeeee"
+        app:ddmaskColor="@color/mask_color"
+        app:ddmenuBackgroundColor="@android:color/white"
+        app:ddmenuMenuHeightPercent="0.5"
+        app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+        app:ddmenuTextSize="12dp"
+        app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+        app:ddtextSelectedColor="@color/black_333333"
+        app:ddtextUnselectedColor="@color/black_333333"
+        app:ddunderlineColor="@color/gray_eeeeee" />
+
+</LinearLayout>

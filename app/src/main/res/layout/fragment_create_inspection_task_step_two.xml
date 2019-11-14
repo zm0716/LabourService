@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <TextView
+                    android:id="@+id/m_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检测对象"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_dx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/m_text"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:text="选择检测标准"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_zhixing"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="执行人员"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/zhixingren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择执行人"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="检测频次"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:rv_backgroundColor="@color/blue_349fff"
+                    app:rv_cornerRadius="5dp">
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/fragment_jian"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        app:rv_backgroundColor="@color/blue_349fff"
+                        app:rv_cornerRadius_BL="5dp"
+                        app:rv_cornerRadius_TL="5dp" />
+
+                    <TextView
+                        android:id="@+id/text_numbere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="1dp"
+                        android:text="1"
+                        android:textColor="@color/black_333333"
+                        android:textSize="13dp" />
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/fragment_jia"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        app:rv_backgroundColor="@color/blue_349fff"
+                        app:rv_cornerRadius_BR="5dp"
+                        app:rv_cornerRadius_TR="5dp" />
+                </com.flyco.roundview.RoundLinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="检测标准"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/image_one"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_checked" />
+
+                    <TextView
+                        android:id="@+id/text_jiyu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="基于项目已有的检测内容配置"
+                        android:textColor="@color/blue_2093ff"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="4dp"
+                    android:text="暂无检测内容"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/image_two"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:src="@mipmap/ic_unchecked" />
+
+                    <TextView
+                        android:id="@+id/text_biaozhun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="选择检测标准"
+                        android:textColor="@color/black_333333"
+                        android:textSize="17dp" />
+                </LinearLayout>
+                <!--<Spinner-->
+                <!--android:id="@+id/spnner"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:spinnerMode="dropdown"-->
+                <!--/>-->
+                <RelativeLayout
+                    android:id="@+id/relayout_moban"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/selector_mokuai"
+                    android:minHeight="30dp">
+
+                    <TextView
+                        android:id="@+id/template_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/black_333333" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/xia" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_rw_xzjcnr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="选择检测内容"
+                        android:textColor="@color/blue_349fff"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/text_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0项"
+                        android:textColor="@color/black_333333"
+                        android:textSize="17dp" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/ic_arrow_right" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_tuliao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/m_time_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="选择截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第2次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第3次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第4次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第5次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第6次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第7次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第8次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第9次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_time10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="第10次截止日期"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/text_time10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/text_yunxu"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:text="允许检测工程师在前端批量标记缺失的点位为合格点位"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp"
+
+                    />
+
+                <CheckBox
+                    android:id="@+id/swich"
+                    android:layout_width="56dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/check"
+                    android:button="@null"
+
+                    android:checked="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/white"
+                android:padding="14dp">
+
+                <TextView
+
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:text="允许自动触发整改派单"
+                    android:textColor="@color/black_333333"
+                    android:textSize="17dp"
+
+                    />
+
+                <CheckBox
+                    android:id="@+id/noun"
+                    android:layout_width="56dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/check"
+
+                    android:button="@null" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_Rectification"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="选择整改期限"
+                    android:textColor="@color/blue_349fff"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/Rectification_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="整改日期"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/fragment_create_inspection_task_step_two_rtv_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:rv_backgroundColor="@color/blue_349fff"
+        app:rv_cornerRadius="5dp" />
+</LinearLayout>

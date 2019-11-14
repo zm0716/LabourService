@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="76dp"
+    android:layout_height="76dp"
+    app:rv_cornerRadius="10dp"
+    android:layout_marginRight="7dp">
+
+    <com.gcssloop.widget.RCImageView
+        android:id="@+id/item_zg_images_iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/portrait"
+        app:round_corner="10dp" />
+
+    <ImageView
+        android:id="@+id/item_zg_images_iv_del"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_delete" />
+
+</com.flyco.roundview.RoundRelativeLayout>

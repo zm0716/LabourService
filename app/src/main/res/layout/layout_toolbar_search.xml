@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_toolbar_search_ll_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@mipmap/toolbar_bg_2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/layout_toolbar_search_iv_back"
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:src="@mipmap/ic_back_white" />
+
+        <TextView
+            android:id="@+id/layout_toolbar_search_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:id="@+id/layout_toolbar_search_rll_txt"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="14dp"
+
+        android:layout_marginRight="14dp"
+        android:gravity="center"
+        app:rv_backgroundColor="@android:color/white"
+        app:rv_cornerRadius="5dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="搜索"
+            android:textColor="@color/gray_999999"
+            android:textSize="12dp" />
+    </com.flyco.roundview.RoundLinearLayout>
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:id="@+id/layout_toolbar_search_rll_search"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:rv_backgroundColor="@android:color/white"
+        app:rv_cornerRadius="5dp">
+
+        <EditText
+            android:id="@+id/layout_toolbar_search_et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+
+            android:imeOptions="actionSearch"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:singleLine="true"
+            android:textColor="@color/black_333333"
+            android:textSize="12dp" />
+    </com.flyco.roundview.RoundLinearLayout>
+</LinearLayout>

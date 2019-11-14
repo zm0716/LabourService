@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:padding="3dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="钢丝卡扣压板方向"
+        android:textColor="@color/blue_349fff"
+        android:id="@+id/name"
+        android:clickable="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13/20"
+        android:clickable="false"
+        android:textColor="@color/gray_999999"
+        android:textSize="15dp" />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <!--<LinearLayout
+        android:id="@+id/activity_rectification_list_ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/layout_toolbar_ll_wrapper"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/activity_rectification_list_ll_filter_person"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="我负责的"
+                android:textColor="@color/black_333333"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/ic_arrow_down" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="整改中"
+                android:textColor="@color/black_333333"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/ic_arrow_down" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="项目"
+                android:textColor="@color/black_333333"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/ic_arrow_down" />
+
+        </LinearLayout>
+    </LinearLayout>-->
+    <com.agilefinger.labourservice.widget.DropDownMenu
+        android:id="@+id/activity_rectification_list_ll_ddm_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:dddividerColor="@color/gray_eeeeee"
+        app:ddmaskColor="@color/mask_color"
+        app:ddmenuBackgroundColor="@android:color/white"
+        app:ddmenuMenuHeightPercent="0.5"
+        app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+        app:ddmenuTextSize="12dp"
+        app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+        app:ddtextSelectedColor="@color/black_333333"
+        app:ddtextUnselectedColor="@color/black_333333"
+        app:ddunderlineColor="@color/gray_eeeeee" />
+
+</LinearLayout>

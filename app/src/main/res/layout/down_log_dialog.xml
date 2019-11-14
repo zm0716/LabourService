@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="345dp"
+    android:layout_height="319dp"
+    android:layout_centerInParent="true"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/m_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/up_lode" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/m_img"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="35dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/m_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发现新版本:v2.0"
+            android:textColor="@color/black_333333"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/m_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布日期：2019-11-01 12:00"
+            android:textColor="@color/black_333333"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建议所有用户升级。"
+            android:textColor="@color/black_333333"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp">
+
+
+        <Button
+            android:id="@+id/m_back"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/shape_one"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="先等等"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/m_sure"
+            android:layout_width="130dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape_three"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="下载并升级"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

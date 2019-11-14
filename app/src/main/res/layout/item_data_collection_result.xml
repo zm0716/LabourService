@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="6">
+
+            <TextView
+                android:id="@+id/item_data_collection_result_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="分割缝无剥离哈尔符合法律福建安防拉法基"
+                android:maxEms="10"
+
+                android:textColor="@color/black_666666"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/item_data_collection_result_tv_title_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="(9/10)"
+                android:textColor="@color/black_666666"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:visibility="gone"></RadioGroup>
+
+        <TextView
+            android:id="@+id/hege"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2"
+            android:background="@color/gray_e5e5e5"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="合格"
+            android:textColor="#666666"
+            android:textSize="13dp"
+
+            />
+
+        <TextView
+            android:id="@+id/buhege"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/gray_e5e5e5"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="不合格"
+            android:textColor="#666666"
+            android:textSize="13dp" />
+
+        <EditText
+
+            android:id="@+id/jieguo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:hint="请输入检测结果"
+            android:inputType="number|numberDecimal"
+            android:singleLine="true"
+            android:textColor="@color/black_333333"
+            android:textColorHint="@color/gray_999999"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/danwei"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="danwei"
+            android:textColor="@color/black_333333"
+            android:visibility="gone"
+
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_d2d2d2" />
+</LinearLayout>

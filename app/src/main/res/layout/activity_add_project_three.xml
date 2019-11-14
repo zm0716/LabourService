@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddProjectThreeActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/m_line"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="项目组信息"
+                            android:textColor="#ff098bff"
+                            android:textSize="17sp" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/text_lou"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="2dp"
+                            android:background="@color/gray_d2d2d2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="项目经理"
+                            android:textColor="@color/black_333333"
+                            android:textSize="17sp" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/text_lou"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="17dp"
+                            android:layout_marginRight="2dp"
+                            android:background="@color/gray_d2d2d2" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="16dp">
+
+                            <ImageView
+                                android:id="@+id/m_group_img"
+                                android:layout_width="39dp"
+                                android:layout_height="39dp"
+                                android:src="@mipmap/delete_limian" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/m_group_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="孙鹏鹏"
+                                    android:textColor="#ff333333"
+                                    android:textSize="17sp" />
+
+                                <TextView
+                                    android:id="@+id/m_group_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2019--1-1 加入"
+                                    android:textColor="#ff999999"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/m_rela"
+                    android:layout_width="match_parent"
+                    android:background="@color/gray_f9f9f9"
+                    android:layout_height="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/m_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="15dp"
+                        android:text="项目组成员"
+                        android:textColor="@color/black_333333"
+                        android:textSize="17sp" />
+
+
+                    <View
+
+                        android:id="@+id/m_title_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/m_title"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/gray_d2d2d2" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/m_people_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/m_title_view"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/m_null_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/m_title_view"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/no" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5.5dp"
+                            android:text="暂无成员，请点击添加"
+                            android:textColor="#ff999999"
+                            android:textSize="14sp" />
+
+
+                        <com.flyco.roundview.RoundTextView
+                            android:id="@+id/m_add_project_people"
+                            android:layout_width="184dp"
+                            android:layout_height="51dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="11dp"
+                            android:gravity="center"
+                            android:text="下一步"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:rv_backgroundColor="@color/blue_349fff"
+                            app:rv_cornerRadius="5dp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/m_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/m_yj_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="移交项目经理"
+                    android:textColor="#ff349fff"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/m_add_people_btn"
+                    android:layout_width="1dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/gray_d2d2d2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="+添加成员"
+                    android:textColor="#ff349fff"
+                    android:textSize="17sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/activity_next_creat_project_three"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="7dp"
+                android:gravity="center"
+                android:text="跳过"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:rv_backgroundColor="@color/blue_349fff"
+                app:rv_cornerRadius="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

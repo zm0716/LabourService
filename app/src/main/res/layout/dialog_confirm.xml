@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="40dp"
+    app:rv_backgroundColor="@android:color/white"
+    app:rv_cornerRadius="5dp">
+
+    <TextView
+        android:id="@+id/dialog_confirm_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="确定提交？"
+        android:textColor="@color/black_333333"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/dialog_confirm_rtv_ok"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            app:rv_backgroundColor="@color/blue_66a7e1"
+            app:rv_isRadiusHalfHeight="true" />
+
+        <TextView
+            android:id="@+id/dialog_confirm_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</com.flyco.roundview.RoundLinearLayout>

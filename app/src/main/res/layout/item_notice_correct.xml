@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp">
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/item_notice_correct_rtv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="5dp"
+        android:text="今天 08:55"
+        android:textColor="@android:color/white"
+        android:textSize="10dp"
+        app:rv_backgroundColor="@color/gray_dcdcdc"
+        app:rv_cornerRadius="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_correct" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/chat_bg"
+            android:orientation="vertical"
+            android:paddingBottom="14dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="13dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="整改"
+                    android:textColor="@color/green_58b888"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/item_notice_correct_rtv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:paddingTop="2dp"
+                    android:text="已读"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp"
+                    app:rv_backgroundColor="@color/gray_999999"
+                    app:rv_isRadiusHalfHeight="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_notice_correct_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="您有1个新的整改派单，请及时处理"
+                android:textColor="@color/black_333333"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/item_notice_correct_tv_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="项目名称:XXXX项目"
+                android:textColor="@color/gray_999999"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/item_notice_correct_tv_deadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="整改期限:2019年5月27日 18:00"
+                android:textColor="@color/gray_999999"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/item_notice_correct_tv_look"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="点击查看"
+                android:textColor="@color/blue_66a7e1"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

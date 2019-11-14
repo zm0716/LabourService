@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/layout_rectification_content_rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_rectification_content_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:visibility="gone">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/layout_rectification_content_rtv_draft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="草稿箱"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@android:color/white"
+            app:rv_cornerRadius="5dp"
+            app:rv_strokeColor="@color/blue_349fff"
+            app:rv_strokeWidth="1dp" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="match_parent" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/layout_rectification_content_rtv_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="新增整改派单"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp" />
+    </LinearLayout>
+</LinearLayout>

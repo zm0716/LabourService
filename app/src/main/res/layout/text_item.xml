@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="5dp"
+    android:weightSum="4"
+    android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/m_buing_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="@color/black_333333"
+            android:textSize="17dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_weight="3"
+            android:id="@+id/buildingtv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/m_buing_name"
+            android:gravity="left"
+            android:text=""
+            android:textColor="@color/gray_999999"
+            android:textSize="16dp" />
+
+</LinearLayout>

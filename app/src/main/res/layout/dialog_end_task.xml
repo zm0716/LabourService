@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:rv_backgroundColor="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:rv_cornerRadius="5dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认结束任务"
+        android:textColor="@color/black_333333"
+        android:textSize="17dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:id="@+id/number_tv"
+        android:text="共343个检测项，您已检测330项"
+        android:textColor="@color/gray_999999"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:id="@+id/queshao_tv"
+        android:lineSpacingExtra="10dp"
+        android:text="其中有以下13项检测项缺少点位数据，请检测完成后再提交!"
+        android:textColor="@color/gray_999999"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray_d2d2d2" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dialog_end_task_rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="165dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray_d2d2d2" />
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:id="@+id/dialog_end_task_rll_sign"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:rv_backgroundColor="@color/blue_349fff"
+        app:rv_cornerRadius="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="将空缺点位标记为合格"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(测量值的检测项不能进行此操作)"
+            android:textColor="#bfdcff"
+            android:textSize="13dp" />
+    </com.flyco.roundview.RoundLinearLayout>
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:id="@+id/dialog_end_task_rll_ok"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:rv_backgroundColor="@color/blue_349fff"
+        app:rv_cornerRadius="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </com.flyco.roundview.RoundLinearLayout>
+</com.flyco.roundview.RoundLinearLayout>

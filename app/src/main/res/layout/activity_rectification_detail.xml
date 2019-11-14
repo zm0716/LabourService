@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/ic_project" />
+
+                <TextView
+                    android:id="@+id/activity_rectification_detail_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333333"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/activity_rectification_detail_rtv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:rv_backgroundColor="@color/blue_66a7e1"
+                    app:rv_isRadiusHalfHeight="true" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/ic_man" />
+
+                <TextView
+                    android:id="@+id/activity_rectification_detail_tv_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333333"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/ic_locate" />
+
+                <TextView
+                    android:id="@+id/activity_rectification_detail_tv_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text=""
+                    android:textColor="@color/black_333333"
+                    android:textSize="13dp" />
+                <!--android:ellipsize="end"-->
+                <!--android:lines="1"-->
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/ic_time" />
+
+                <TextView
+                    android:id="@+id/activity_rectification_detail_tv_deadline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_333333"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_rectification_detail_ll_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_rectification_detail_rv_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_rectification_detail_ll_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_rectification_detail_rv_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_rectification_detail_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:text="创建于 今天 21:30"
+                android:textColor="@color/gray_999999"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_eeeeee" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_rectification_detail_rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/activity_rectification_detail_ll_btn_reject_pass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray_eeeeee"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_rectification_detail_rtv_reject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="验收驳回"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@android:color/white"
+            app:rv_cornerRadius="5dp"
+            app:rv_strokeColor="@color/blue_349fff"
+            app:rv_strokeWidth="1dp" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="match_parent" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_rectification_detail_rtv_pass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="验收通过"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_rectification_detail_ll_btn_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray_eeeeee"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_rectification_detail_rtv_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="撤回"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_rectification_detail_ll_btn_appoint_refuse_reply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray_eeeeee"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_rectification_detail_rtv_appoint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="指派"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@android:color/white"
+            app:rv_cornerRadius="5dp"
+            app:rv_strokeColor="@color/blue_349fff"
+            app:rv_strokeWidth="1dp" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="match_parent" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_rectification_detail_rtv_refuse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="忽略"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="#fff"
+            app:rv_cornerRadius="5dp"
+            app:rv_strokeColor="@color/blue_349fff"
+            app:rv_strokeWidth="1dp" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="match_parent" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_rectification_detail_rtv_reply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="整改回复"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp" />
+    </LinearLayout>
+</LinearLayout>

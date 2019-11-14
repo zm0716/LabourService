@@ -1,0 +1,7 @@
+include ':app'
+include ':lib_library:autosize'
+include ':lib_library:FlycoRoundView_Lib'
+include ':lib_library:pager-bottom-tab-strip'
+include ':lib_library:brvah:library'
+include ':lib_library:SpeexLib'
+include ':lib_library:RCLayout'

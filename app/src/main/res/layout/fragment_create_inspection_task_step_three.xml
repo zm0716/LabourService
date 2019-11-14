@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_eeeeee"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="114dp"
+            android:layout_height="148.5dp"
+            android:src="@mipmap/create_success" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@color/gray_eeeeee"
+        android:visibility="visible">
+
+        <com.flyco.roundview.RoundTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/checktask_tv"
+            android:text="查看任务"
+            android:textColor="@color/blue_349fff"
+            android:textSize="17dp"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius="5dp"
+            app:rv_strokeColor="@color/blue_349fff"
+            app:rv_strokeWidth="1dp" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="0dp" />
+
+        <com.flyco.roundview.RoundTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="继续创建"
+            android:id="@+id/continue_tv"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ease_recording_hint_bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/mic_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ease_record_animate_01"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/count_down_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/n_10"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/recording_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mic_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:padding="2dp"
+        android:text="@string/move_up_to_cancel"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/recording_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="0s"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="visible" />
+</RelativeLayout>

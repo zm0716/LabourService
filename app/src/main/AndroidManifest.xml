@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.agilefinger.labourservice">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 向SD卡写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".LSApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="zn0ytiCrs0yQdlLHxvUWrs9tpXRi9B8d" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.agilefinger.labourservice.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+         
+
+         
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="675" />
+
+        <activity
+            android:name=".activity.LoginCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.LoginPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ForgetPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.MessageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.RectificationListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ProjectSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.TeamSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.RectificationFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddRectificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.DraftListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.RectificationDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AccountSecurityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ChangePwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.StaffSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.StaffSelection2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.LaunchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ProgressListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.BuildingSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddProgressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ToDoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.LookStateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ResubmitRectificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddWeatherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".widget.PlusImage.PlusImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionPositionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionItemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.CreateInspectionTaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ChooseInspectionContentOneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.DataCollectionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ConfirmSubmitInspectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.DataCollectionMultiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.DataCollectionResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionIllustrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.CatalogueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.JceBaogaoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KanBanListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.InspectionSearchKBActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KanBanDetilsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".activity.ManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddmembersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddGroupLeaderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddProjectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.JcWeiZhiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ProjectgroupinformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.CreateXMThreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.RemovemembersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.CreateXMFourActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.Xzpersonnelactivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.SeachItemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.TesterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.LookReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.PdfActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KanBanSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.MoreImgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity android:name=".activity.Main3Activity" />
+        <activity android:name=".activity.CreateInspectionOneActivity" />
+        <activity android:name=".activity.CreateInspectionTwoeActivity" />
+        <activity android:name=".activity.CreateInspectionThreeeActivity" />
+        <activity
+            android:name=".activity.CreatProjectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.BatchesBuildingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddBuildingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.AddProjectThreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KanBanFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KBXJActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KBFWSActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KBFWSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.EngineeringTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KanBanTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.KanBanStatusActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity android:name=".activity.MoreImageTabActivity" />
+        <activity
+            android:name=".activity.ImageViwFillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.ImageAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity
+            android:name=".activity.BigImage2Activity"
+            android:theme="@style/AppBackTheme" />
+        <activity
+            android:name=".activity.BigImageActivity"
+            android:theme="@style/AppBackTheme" />
+        <activity
+            android:name=".activity.RedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme" />
+        <activity android:name=".activity.DataKBActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullBleedTheme"></activity>
+    </application>
+
+</manifest>

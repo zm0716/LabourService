@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_toolbar_search_2_ll_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:background="@mipmap/toolbar_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.flyco.roundview.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="18dp"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/image_search"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_search_blue" />
+
+            <EditText
+                android:id="@+id/layout_toolbar_search_2_et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint=""
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textColor="@color/black_333333"
+                android:textColorHint="@color/gray_999999"
+                android:textSize="15dp"
+                />
+        </com.flyco.roundview.RoundLinearLayout>
+
+        <TextView
+            android:id="@+id/layout_toolbar_search_2_tv_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

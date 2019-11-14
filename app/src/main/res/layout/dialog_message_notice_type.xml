@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/dialog_message_notice_type_rtv_all"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="全部通知"
+        android:textColor="@color/black_333333"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:rv_backgroundColor="@android:color/white"
+        app:rv_backgroundPressColor="@color/gray_eeeeee"
+        app:rv_cornerRadius_TL="5dp"
+        app:rv_cornerRadius_TR="5dp"
+        app:rv_isRippleEnable="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_eeeeee" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/dialog_message_notice_type_rtv_correct"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="整改"
+        android:textColor="@color/black_333333"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:rv_backgroundColor="@color/gray_eeeeee"
+        app:rv_cornerRadius_BL="5dp"
+        app:rv_cornerRadius_BR="5dp"
+        app:rv_isRippleEnable="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_eeeeee"
+        android:visibility="gone" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/dialog_message_notice_type_rtv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="进度"
+        android:textColor="@color/black_333333"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:rv_backgroundColor="@android:color/white"
+        app:rv_backgroundPressColor="@color/gray_eeeeee"
+        app:rv_cornerRadius_BL="5dp"
+        app:rv_cornerRadius_BR="5dp"
+        app:rv_isRippleEnable="true" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/dialog_message_notice_type_rtv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/black_333333"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:rv_backgroundColor="@android:color/white"
+        app:rv_backgroundPressColor="@color/gray_eeeeee"
+        app:rv_cornerRadius="5dp"
+        app:rv_isRippleEnable="true" />
+
+</LinearLayout>

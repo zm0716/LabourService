@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.MoreImageTabActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <RadioGroup
+        android:id="@+id/m_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="11dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RadioButton
+            android:id="@+id/m_rb_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/image_type"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="默认排序"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/m_rb_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/image_type"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="按来源"
+            android:textColor="@color/blue_2093ff"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/m_rb_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/image_type"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="按日期"
+            android:textColor="@color/blue_2093ff"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/m_rb_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/image_type"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="按楼号"
+            android:textColor="@color/blue_2093ff"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+
+    <FrameLayout
+        android:id="@+id/m_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

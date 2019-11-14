@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_inspection_item_rll_wrapper"
+    android:layout_width="65dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:minHeight="65dp"
+    android:orientation="vertical"
+    app:rv_backgroundColor="#bfbebe"
+    app:rv_cornerRadius="5dp">
+
+    <TextView
+        android:id="@+id/item_inspection_item_tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/item_inspection_item_tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="增加点位"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+</com.flyco.roundview.RoundLinearLayout>

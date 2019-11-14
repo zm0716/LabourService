@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_add_inspection_position_tv_building"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="楼号"
+                android:textColor="@color/blue_349fff"
+                android:textSize="16dp" />
+
+            <View
+                android:id="@+id/dialog_add_inspection_position_v_building"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_349fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_add_inspection_position_tv_group"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="班组"
+                android:textColor="@color/gray_999999"
+                android:textSize="16dp" />
+
+            <View
+                android:id="@+id/dialog_add_inspection_position_v_group"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_349fff"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/dialog_add_inspection_position_rtv_cancel"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray_999999"
+            android:textSize="13dp"
+            app:rv_cornerRadius="5dp" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/dialog_add_inspection_position_rtv_save"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_d2d2d2" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dialog_add_inspection_position_rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+</LinearLayout>

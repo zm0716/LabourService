@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/btn_camera"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightpopwindow"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="设置检测位置"
+        android:textColor="#000"
+       />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C9C9CB" />
+
+    <TextView
+        android:id="@+id/btn_photo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightpopwindow"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="编辑检测说明"
+        android:textColor="#000"
+      />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C9C9CB" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#e3e3e6" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C9C9CB" />
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/heightpopwindow"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#000"
+       />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C9C9CB" />
+</LinearLayout>

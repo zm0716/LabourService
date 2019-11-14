@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:paddingTop="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/ic_project" />
+
+        <TextView
+            android:id="@+id/item_rectification_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="三沙路公寓项目（海军小镇南区）"
+            android:textColor="@color/black_333333"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/item_rectification_rtv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="整改中"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_66a7e1"
+            app:rv_isRadiusHalfHeight="true"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/ic_man" />
+
+        <TextView
+            android:id="@+id/item_rectification_tv_zg_man"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="王大锤负责整改"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/ic_time" />
+
+        <TextView
+            android:id="@+id/item_rectification_tv_deadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="2019年5月23日 18:00 截止"
+            android:textColor="@color/black_333333"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_rectification_rv_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_rectification_ll_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
+
+        <com.flyco.roundview.RoundLinearLayout
+            android:id="@+id/item_rectification_rll_voice"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_voice" />
+
+            <TextView
+                android:id="@+id/item_rectification_tv_voice_len"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="12''"
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+        </com.flyco.roundview.RoundLinearLayout>
+
+        <TextView
+            android:id="@+id/item_rectification_tv_voice_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="更多4条语音"
+            android:textColor="@color/gray_999999"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_rectification_tv_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="创建于 今天 21:30"
+        android:textColor="@color/gray_999999"
+        android:textSize="12dp" />
+
+</LinearLayout>

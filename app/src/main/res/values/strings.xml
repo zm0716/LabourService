@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">劳物通-企业版</string>
+
+
+    <string name="Send_voice_need_sdcard_support">发送语音需要sdcard支持</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="Recording_without_permission">无录音权限</string>
+    <string name="weather">天气</string>
+    <string-array name="stop_inspection_reason">
+        <item>天气原因</item>
+        <item>监管部门原因</item>
+        <item>甲方原因</item>
+        <item>自身原因</item>
+        <item>其他原因</item>
+    </string-array>
+
+    <string-array name="data_collection_tab">
+        <item>安全评价</item>
+        <item>文明施工</item>
+        <item>质量评价</item>
+    </string-array>
+    <string-array name="data_collection_filter">
+        <item>全部</item>
+        <item>部分采集</item>
+        <item>采集完成</item>
+        <item>未采集</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

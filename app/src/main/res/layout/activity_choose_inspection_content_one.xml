@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+    <!-- 形式2 开始 -->
+    <LinearLayout
+        android:id="@+id/activity_data_collection_ll_kind_liebiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_data_collection_rv_aq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_data_collection_rv_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp" />
+    </LinearLayout>
+    <!-- 形式2 结束 -->
+
+
+
+    <!-- 目录样式 -->
+    <LinearLayout
+        android:id="@+id/activity_data_collection_ll_kind_mulu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:visibility="gone"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_fenlei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_d2d2d2"
+
+
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_choose_inspection_content_one_rv_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="14dp"
+        android:id="@+id/checkAll"
+        android:paddingRight="14dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/image_checkeAll"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_unchecked"
+            />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_checkAll"
+            android:layout_width="60dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="全选"
+            android:textColor="@color/gray_999999"
+            android:textSize="15dp"
+            app:rv_backgroundColor="@color/gray_ededed"
+            app:rv_cornerRadius="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@color/gray_eeeeee"
+        android:visibility="visible">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/activity_queding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/blue_349fff"
+            app:rv_cornerRadius="5dp"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+    <!--item_data_collection_multi-->
